@@ -33,7 +33,7 @@
                 include "read.php";
             ?>
             <a href="login.php" class="loginbtn">Log In</a>
-            <a href="signup.php" class="loginbtn">Sign Up</a>
+            <a href="loginas.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->
@@ -58,7 +58,7 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br>
 
-            <button type="submit">Login</button>
+            <button type="submit" class="loginbtn">Login</button>
         </form>
 
     <div class="signup-link">
@@ -75,7 +75,7 @@
             <!-- Logo and Description -->
             <div class="footer-logo-section">
                 <a href="index.html">
-                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <img src="images/logo/ride max sl (3).png" alt="Logo" class="footer-logo">
                 </a>
                 <p>Your trusted vehicle rental service, offering the best deals.</p>
             </div>

@@ -29,7 +29,7 @@
 
         <div class="div2">
             <a href="login.php" class="loginbtn">Log In</a>
-            <a href="signup.php" class="loginbtn">Sign Up</a>
+            <a href="loginas.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->
@@ -63,7 +63,7 @@
             <!-- Logo and Description -->
             <div class="footer-logo-section">
                 <a href="index.html">
-                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <img src="images/logo/ride max sl (3).png" alt="Logo" class="footer-logo">
                 </a>
                 <p>Your trusted vehicle rental service, offering the best deals.</p>
             </div>

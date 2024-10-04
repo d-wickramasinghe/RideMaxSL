@@ -30,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Redirect based on user type
                 if ($user_type == 'customer') {
-                    header("Location: customer_dashboard.php"); // Customer's dashboard
+                    header("Location: home.php"); // Customer's dashboard
                 } else if ($user_type == 'driver') {
-                    header("Location: driver_dashboard.php"); // Driver's dashboard
+                    header("Location: home.php"); // Driver's dashboard
                 }
                 exit();
             } else {

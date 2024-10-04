@@ -30,7 +30,7 @@
 
         <div class="div2">
             <a href="login.php" class="loginbtn">Log In</a>
-            <a href="signup.php" class="loginbtn">Sign Up</a>
+            <a href="loginas.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->
@@ -40,10 +40,6 @@
         <legend>Create an New Account</legend>
 
         <form method="post" action="insert.php">
-
-        Customer ID : <br>
-        <input type="text" name="fname" disabled><br><br>
-
 
         First Name : <br>
         <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
