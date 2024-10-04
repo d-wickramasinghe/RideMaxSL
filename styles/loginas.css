@@ -3,6 +3,7 @@
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
+
 }
 
 .navbar{
@@ -57,7 +58,16 @@ a:hover{
     height:75px;
 }
 
-.loginbtn{
+.loginbtn {
+    text-decoration: none;
+    background-color: black;
+    color: rgb(220, 209, 209);
+    padding: 8px 15px;
+    margin: 10px 15px;
+    border-radius: 5px;
+}
+
+.logoutbtn{
     text-decoration: none;
     background-color: black;
     color: rgb(220, 209, 209);
@@ -211,4 +221,54 @@ a:hover{
 }
 
 
-/* Insert code below*/
+
+/*loginas.php*/
+.div1loginas {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.div1loginas h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.div1loginas .error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.loginAsbtn {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(132, 132, 16);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.loginAsbtn:hover {
+    background-color: black;
+}
+
+.div1loginas form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

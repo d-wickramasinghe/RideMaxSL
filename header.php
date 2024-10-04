@@ -9,6 +9,8 @@
 </head>
 <body class="body">
     <nav class="navbar">
+        <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
+
         <div class="div1">
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
@@ -22,12 +24,11 @@
         </div>
 
         <div class="user-profile">
-            <a href="#"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
+            <a href="userprofile.php"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
         </div>
 
         <div class="div2">
-            <a href="login.php" class="loginbtn">Log In</a>
-            <a href="signup.php" class="loginbtn">Sign Up</a>
+            <br><a href="main.php" class="logoutbtn">Log out</a>
         </div>
     </nav>
     
