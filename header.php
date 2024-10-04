@@ -28,7 +28,7 @@ session_start(); // Start session to track if the user is logged in
         </div>
 
         <div class="user-profile">
-            <a href="userprofile.php"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
+            <a href="cus_userprofile.php"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
         </div>
 
         <div class="div2">

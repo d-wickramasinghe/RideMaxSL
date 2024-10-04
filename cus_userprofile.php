@@ -16,7 +16,7 @@
     <p><h1>Hi!</h1></p>
     
     <!-- Display current profile data -->
-    <form method="post" action="update.php" class="Uform">
+    <form method="post" action="cus_update.php" class="Uform">
         <label>First Name:</label>
         <input type="text" name="fname" value="<?php echo $customer['fname']; ?>" required><br>
 

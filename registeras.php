@@ -29,7 +29,7 @@
 
         <div class="div2">
             <a href="login.php" class="loginbtn">Log In</a>
-            <a href="loginas.php" class="loginbtn">Sign Up</a>
+            <a href="registeras.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->
@@ -47,8 +47,8 @@
     
     <form action="signup.php" method="post">
 
-        <a href="signup.php" class="loginAsbtn">Customer</a>
-        <a href="signup.php" class="loginAsbtn">Driver</a>
+        <a href="cus_signup.php" class="loginAsbtn">Customer</a>
+        <a href="cus_signup.php" class="loginAsbtn">Driver</a>
 
     </form>
 

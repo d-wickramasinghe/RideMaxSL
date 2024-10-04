@@ -33,7 +33,7 @@
                 include "read.php";
             ?>
             <a href="login.php" class="loginbtn">Log In</a>
-            <a href="loginas.php" class="loginbtn">Sign Up</a>
+            <a href="registeras.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->
@@ -62,7 +62,7 @@
         </form>
 
     <div class="signup-link">
-        <p>Don't have an account? <a href="signup.php">Sign up here</a></p>
+        <p>Don't have an account? <a href="cus_signup.php">Sign up here</a></p>
     </div>
     </div>
 
