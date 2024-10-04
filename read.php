@@ -1,46 +1,57 @@
 <?php
+// Include config file for database connection
 require 'config.php';
+
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the submitted login data
-    $c_email = $_POST["email"];
-    $c_password = $_POST["password"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-    // Check if username and password are filled
-    if (!empty($c_email) && !empty($c_password)) {
-        // Prepare SQL query to get user by username using prepared statements
-        $stmt = $con->prepare("SELECT * FROM customer WHERE email = ?");
-        $stmt->bind_param("s", $c_email);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    // Check if email and password fields are filled
+    if (!empty($email) && !empty($password)) {
+        // Prepare SQL query to check user credentials
+        $query = "SELECT * FROM user_login WHERE email = '$email'";
+        $result = mysqli_query($con, $query);
 
         // Check if user exists
-        if ($result->num_rows > 0) {
-            // Fetch the user data
-            $row = $result->fetch_assoc();
-            $stored_password = $row["password"]; // Assuming the password is stored in the "password" column
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $stored_password = $row['password'];
+            $user_type = $row['user_type'];
 
-            // Verify password (consider using password_verify() for hashed passwords)
-            if (password_verify($c_password, $stored_password)) {
-                // Set session or cookies as needed (optional)
-                session_start();
-                $_SESSION['user_id'] = $row['id']; // Example: Storing user ID in the session
-                $_SESSION['email'] = $row['email']; // Example: Storing email in the session
+            // Verify the password
+            if ($password == $stored_password) {
+                // Set session variables based on user type
+                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['user_type'] = $row['user_type'];
 
-                // Redirect to home page after successful login
-                header("Location: home.php");
+                // Redirect based on user type
+                if ($user_type == 'customer') {
+                    header("Location: customer_dashboard.php"); // Customer's dashboard
+                } else if ($user_type == 'driver') {
+                    header("Location: driver_dashboard.php"); // Driver's dashboard
+                }
                 exit();
             } else {
-                $error = "Invalid password. Please try again.";
+                // Invalid password
+                header("Location: login.php?error=Invalid email or password.");
+                exit();
             }
         } else {
-            $error = "No user found with that username.";
+            // Invalid email
+            header("Location: login.php?error=Invalid email or password.");
+            exit();
         }
-        $stmt->close();
     } else {
-        $error = "Please enter both username and password.";
+        // Fields are empty
+        header("Location: login_form.php?error=Please enter both email and password.");
+        exit();
     }
 }
 
-$con->close();
+// Close database connection
+mysqli_close($con);
 ?>

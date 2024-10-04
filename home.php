@@ -12,9 +12,6 @@
     <?php
         include "header.php";
     ?>
-<<<<<<< Updated upstream
-    <!--  Include your code below-->
-=======
         <div class="image-container">
         <img src="images/home page img/1.png" alt="Image 1" class="image visible">
         <img src="images/home page img/2.png" alt="Image 2" class="image">
@@ -38,7 +35,6 @@
 
         setInterval(showNextImage, 3000);
     </script>
->>>>>>> Stashed changes
 
 
 

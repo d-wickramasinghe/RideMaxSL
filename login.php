@@ -44,19 +44,22 @@
 
     <h2>Login</h2>
 
-    <?php if (isset($error)): ?>
-        <div class="error"><?php echo $error; ?></div>
-    <?php endif; ?>
-    
-    <form action="home.php" method="post">
-        <label="email">Email</label>
-        <input type="email" name="email" placeholder="Your email" required>
+    <?php
+        // Check for error messages passed through the URL (using GET method)
+        if (isset($_GET['error'])) {
+            echo "<p class='error-message'>" . htmlspecialchars($_GET['error']) . "</p>";
+        }
+        ?>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Your password" required>
+        <form method="post" action="read.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
 
-        <input type="submit" value="Login">
-    </form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
 
     <div class="signup-link">
         <p>Don't have an account? <a href="signup.php">Sign up here</a></p>

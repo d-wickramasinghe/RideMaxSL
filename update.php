@@ -12,9 +12,7 @@
 
     if(empty($fname)||empty($lname)||empty($email)||empty($address)||empty($contact)||empty($nic)||empty($uname)||empty($password))
     {
-        <script>
-        onclick="return confirm('Are you sure you want to delete your account?')";
-        </script>
+        echo "<script>onclick="return confirm('Are you sure you want to delete your account?')";</script>";
     }
     else{
         $sql = "UPDATE customer c, c_phonenumber p
