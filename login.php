@@ -7,7 +7,7 @@
     <link rel='stylesheet' type='text/css' href='styles/login.css'>
     <script src='myScript.js'></script>
 </head>
-<body class="body">
+<body class="body" >
 
     <nav class="navbar">
          <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
@@ -32,8 +32,8 @@
             <?php
                 include "read.php";
             ?>
-            <a href="login.php" class="loginbtn">Log In</a>
-            <a href="registeras.php" class="loginbtn">Sign Up</a>
+            <a href="login.php" class="loginbtn1">Log In</a>
+            <a href="registeras.php" class="loginbtn1">Sign Up</a>
         </div>
     </nav>
     <!--end of the header-->

@@ -21,7 +21,6 @@ require 'config.php';
     if (isset($_SESSION['email'])) {
         $email = $_SESSION['email'];
 
-        // Fetch user login details to get the email
         $login_query = "SELECT * FROM user_login WHERE email = '$email'";
         $login_result = $con->query($login_query);
         
@@ -29,18 +28,16 @@ require 'config.php';
             $login_row = $login_result->fetch_assoc();
             $email = $login_row['email'];
 
-            // Query customer data using email
             $sql = "SELECT * FROM customer WHERE email = '$email'";
-            $sql2 = "SELECT * FROM c_phonenumber WHERE customer_id = (SELECT customer_id FROM customer WHERE email = '$email')";
 
             $result = $con->query($sql);
-            $result2 = $con->query($sql2);
+    
 
-            // Check if the customer query was successful
-            if ($result->num_rows > 0 && $result2->num_rows > 0) {
+            if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                $row2 = $result2->fetch_assoc();
 
+                $id = $row['customer_id'];
+                $_SESSION['cus_id'] = $id;
                 // Display user data
                 echo '<div class="div_1">
                 <fieldset class="display">
@@ -49,7 +46,7 @@ require 'config.php';
                 <h2>Email: ' . $row['email'] . '</h2>
                 <h2>Address: ' . $row['address'] . '</h2>
                 <h2>NIC: ' . $row['nic'] . '</h2>
-                <h2>Phone No: ' . $row2['phone_number'] . '</h2>
+                <h2>Phone No: ' . $row['c_phone'] . '</h2>
 
                 <form method="post" action="cus_edit.php">
                     <button type="submit" class="editbtn" name="editbtn">Edit</button>
