@@ -37,7 +37,7 @@
     
 
     <fieldset>
-        <legend>Create an New Account</legend>
+        <h2>Create an New Account</h2>
 
         <form method="post" action="cus_signup_insert.php">
 
