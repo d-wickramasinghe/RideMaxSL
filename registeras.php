@@ -45,15 +45,10 @@
     <?php endif; ?>
     
     
-    <form action="signup.php" method="post">
+    <form action="cus_signup.php" method="post">
 
-<<<<<<< Updated upstream:registeras.php
         <a href="cus_signup.php" class="loginAsbtn">Customer</a>
-        <a href="cus_signup.php" class="loginAsbtn">Driver</a>
-=======
-        <a href="signup.php" class="loginAsbtn">Customer</a>
         <a href="driverSignup.php" class="loginAsbtn">Driver</a>
->>>>>>> Stashed changes:loginas.php
 
     </form>
 
