@@ -9,6 +9,7 @@
     <script src='myScript.js'></script>
 </head>
 <body class="body">
+<<<<<<< Updated upstream
 <nav class="navbar">
     <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
 
@@ -33,17 +34,26 @@
             <a href="cus_signup.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
+=======
+    <?php 
+        include "header.php";
+    ?>
+>>>>>>> Stashed changes
     <!--end of the header-->
     
 
     <fieldset>
         <legend>Create an New Account</legend>
 
+<<<<<<< Updated upstream
         <form method="post" action="cus_signup_insert.php">
 
         Customer ID : <br>
         <input type="text" name="fname" disabled><br><br>
 
+=======
+        <form method="post" action="insert.php">
+>>>>>>> Stashed changes
 
         First Name : <br>
         <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
