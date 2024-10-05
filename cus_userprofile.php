@@ -1,3 +1,9 @@
+<?php
+session_start();
+require 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,44 +12,69 @@
     <title>User Profile</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/crud.css'>
-
+    <link rel='stylesheet' type='text/css' href='styles/userprofile.css'>
 </head>
 <body>
 <?php include "header.php"; ?>
 
-<div class="profile">
-    <h2>Your Profile</h2>
-    <p><h1>Hi!</h1></p>
-    
-    <!-- Display current profile data -->
-    <form method="post" action="cus_update.php" class="Uform">
-        <label>First Name:</label>
-        <input type="text" name="fname" value="<?php echo $customer['fname']; ?>" required><br>
+<div class="main_div">
+    <?php
+    if (isset($_SESSION['email'])) {
+        $email = $_SESSION['email'];
 
-        <label>Last Name:</label>
-        <input type="text" name="lname" value="<?php echo $customer['lname']; ?>" required><br>
+        // Fetch user login details to get the email
+        $login_query = "SELECT * FROM user_login WHERE email = '$email'";
+        $login_result = $con->query($login_query);
+        
+        if ($login_result && $login_result->num_rows > 0) {
+            $login_row = $login_result->fetch_assoc();
+            $email = $login_row['email'];
 
-        <label>Email:</label>
-        <input type="email" name="email" value="<?php echo $customer['email']; ?>" required><br>
+            // Query customer data using email
+            $sql = "SELECT * FROM customer WHERE email = '$email'";
+            $sql2 = "SELECT * FROM c_phonenumber WHERE customer_id = (SELECT customer_id FROM customer WHERE email = '$email')";
 
-        <label>Address:</label>
-        <input type="text" name="address" value="<?php echo $customer['address']; ?>" required><br>
+            $result = $con->query($sql);
+            $result2 = $con->query($sql2);
 
-        <label>Phone Number:</label>
-        <input type="text" name="contact" value="<?php echo $customer['phone_number']; ?>" required><br>
+            // Check if the customer query was successful
+            if ($result->num_rows > 0 && $result2->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $row2 = $result2->fetch_assoc();
 
-        <label>NIC:</label>
-        <input type="text" name="nic" value="<?php echo $customer['nic']; ?>" required><br>
+                // Display user data
+                echo '<div class="div_1">
+                <fieldset class="display">
+                <h1>Name: ' . $row['first_name'] . ' ' . $row['last_name'] . '</h1>
+                <h2>User name: ' . $row['username'] . '</h2>
+                <h2>Email: ' . $row['email'] . '</h2>
+                <h2>Address: ' . $row['address'] . '</h2>
+                <h2>NIC: ' . $row['nic'] . '</h2>
+                <h2>Phone No: ' . $row2['phone_number'] . '</h2>
 
-        <label>Username:</label>
-        <input type="text" name="uname" value="<?php echo $customer['uname']; ?>" required><br>
+                <!-- Update Form -->
+                <form method="post" action="cus_edit.php">
+                    <input type="hidden" name="id" value="' . $row['customer_id'] . '">
+                    <button type="submit" class="editbtn" name="editbtn">Edit</button>
+                </form>
 
-        <label>Password:</label>
-        <input type="password" name="password" value="<?php echo $customer['password']; ?>" required><br>
-
-        <button type="submit" name="update">Update Profile</button>
-        <button type="submit" name="delete" class="delete-btn" onclick="return confirm('Are you sure you want to delete your account?');">Delete Account</button>
-    </form>
+                <!-- Delete Form -->
+                <form method="post" action="cus_delete.php">
+                    <input type="hidden" name="id" value="' . $row['customer_id'] . '">
+                    <button type="submit" class="editbtn" name="deletebtn" onclick="return confirm(\'Are you sure you want to delete your account?\');">Delete</button>
+                </form>
+                </fieldset>
+                </div>';
+            } else {
+                echo "No customer data found for email: $email.";
+            }
+        } else {
+            echo "No user login data found.";
+        }
+    } else {
+        echo "Please log in.";
+    }
+    ?>
 </div>
 
 <?php include "footer.php"; ?>

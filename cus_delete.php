@@ -1,62 +1,50 @@
 <?php
-    require 'config.php';
-    session_start();
+session_start();
+require 'config.php';
 
-    // Check if user is logged in
-    if (!isset($_SESSION['customer_id'])) {
-        header("Location: login.php"); // Redirect to login if not logged in
-        exit();
-    }
+if (isset($_POST['deletebtn'])) {
+    // Get the customer ID from the hidden form field
+    $customer_id = $_POST['id'];
 
-    $customer_id = $_SESSION['customer_id'];
-    $error = "";
+    // Start a transaction to ensure all queries are executed together
+    $con->begin_transaction();
 
-    // Fetch current user details
-    $sql = "SELECT * FROM customer WHERE customer_id = '$customer_id'";
-    $result = $con->query($sql);
+    try {
+        // Fetch the email associated with the customer before deletion
+        $result = $con->query("SELECT email FROM customer WHERE customer_id = $customer_id");
 
-    if ($result->num_rows > 0) {
-        $customer = $result->fetch_assoc();
-    } else {
-        $error = "User not found.";
-    }
+        if ($result && $result->num_rows > 0) {
+            $user_row = $result->fetch_assoc();
+            $email = $user_row['email']; // Get the email for deletion
 
-    // Handle update form submission
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update'])) {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $address = $_POST['address'];
-        $contact = $_POST['contact'];
-        $nic = $_POST['nic'];
-        $uname = $_POST['uname'];
-        $password = $_POST['password'];
+            // Delete the phone number record from the c_phonenumber table
+            $con->query("DELETE FROM c_phonenumber WHERE customer_id = $customer_id");
 
-        // Update user details
-        $sql_update = "UPDATE customer 
-                       SET fname = '$fname', lname = '$lname', email = '$email', address = '$address', 
-                           nic = '$nic', uname = '$uname', password = '$password' 
-                       WHERE customer_id = '$customer_id'";
+            // Delete the customer record from the customer table
+            $con->query("DELETE FROM customer WHERE customer_id = $customer_id");
 
-        if ($con->query($sql_update)) {
-            $success = "Profile updated successfully!";
-        } else {
-            $error = "Error updating profile: " . $con->error;
-        }
-    }
+            // Delete the user record from the user_login table using the email
+            $con->query("DELETE FROM user_login WHERE email = '$email'");
 
-    // Handle delete account
-    if (isset($_POST['delete'])) {
-        $sql_delete = "DELETE FROM customer WHERE customer_id = '$customer_id'";
-        if ($con->query($sql_delete)) {
-            // Log the user out and redirect to the signup page
+            // If all deletes were successful, commit the transaction
+            $con->commit();
+
+            // Destroy the session and redirect to the homepage
             session_destroy();
-            header("Location: signup.php");
+            header("Location: main.php");
             exit();
         } else {
-            $error = "Error deleting account: " . $con->error;
+            throw new Exception("User not found.");
         }
+    } catch (mysqli_sql_exception $exception) {
+        // If there was an error, roll back the transaction
+        $con->rollback();
+        echo "Error deleting record: " . $exception->getMessage();
+    } catch (Exception $e) {
+        // Handle any other exceptions
+        echo "Error: " . $e->getMessage();
     }
-
-    $con->close();
+} else {
+    echo "Unauthorized access.";
+}
 ?>

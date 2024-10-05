@@ -1,6 +1,3 @@
-<?php
-session_start(); // Start session to track if the user is logged in
-?>
 
 <!DOCTYPE html>
 <html>
@@ -34,14 +31,8 @@ session_start(); // Start session to track if the user is logged in
         <div class="div2">
             <br>
             <?php
-            // Check if the user is logged in
-            if (isset($_SESSION['user_id'])) {
-                // If logged in, show 'Log Out' button
+            
                 echo '<a href="main.php" class="logoutbtn">Log out</a>';
-            } else {
-                // If not logged in, show 'Log In' button
-                echo '<a href="login.php" class="loginbtn">Log in</a>';
-            }
             ?>
         </div>
     </nav>

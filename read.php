@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if email and password fields are filled
     if (!empty($email) && !empty($password)) {
         // Prepare SQL query to check user credentials
-        $query = "SELECT * FROM user_login WHERE email = '$email'";
-        $result = mysqli_query($con, $query);
-
+        $query = "SELECT * FROM user_login WHERE email = '$email' AND password = '$password'";
+        $result = $con->query($query);
+        
         // Check if user exists
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
