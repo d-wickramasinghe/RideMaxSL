@@ -9,51 +9,16 @@
     <script src='myScript.js'></script>
 </head>
 <body class="body">
-<<<<<<< Updated upstream
-<nav class="navbar">
-    <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
-
-        <div class="div1">
-            <h1 class="name">Welcome to Ride Max SL</h1>
-            <ul class="nav-links">
-                <li><a href="main.php">Home</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
-
-        <div class="user-profile">
-            <a href="#"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
-        </div>
-
-        <div class="div2">
-            <a href="login.php" class="loginbtn">Log In</a>
-            <a href="cus_signup.php" class="loginbtn">Sign Up</a>
-        </div>
-    </nav>
-=======
     <?php 
         include "header.php";
     ?>
->>>>>>> Stashed changes
     <!--end of the header-->
     
 
     <fieldset>
         <legend>Create an New Account</legend>
 
-<<<<<<< Updated upstream
-        <form method="post" action="cus_signup_insert.php">
-
-        Customer ID : <br>
-        <input type="text" name="fname" disabled><br><br>
-
-=======
         <form method="post" action="insert.php">
->>>>>>> Stashed changes
 
         First Name : <br>
         <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
