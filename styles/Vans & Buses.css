@@ -29,6 +29,10 @@
     margin: 10px 0;
 }
 
+.vehicle-card h6 {
+    margin:auto;
+}
+
 .vehicle-card p {
     font-size: 0.9em;
     color: #555;
