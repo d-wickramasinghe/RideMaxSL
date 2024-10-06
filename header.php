@@ -16,7 +16,7 @@
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="car.php">Vehicles</a></li>
+                <li><a href="vehicle.php">Vehicles</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="reservationread.php">Reservation</a></li>
                 <li><a href="about.php">About</a></li>

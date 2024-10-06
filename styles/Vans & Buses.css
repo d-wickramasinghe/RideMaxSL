@@ -1,0 +1,58 @@
+.vehicle-section {
+    background :black;
+}
+.vehicle-section h1 {
+    background-color: yellow;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.vehicle-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.vehicle-card h3 {
+    margin: 10px 0;
+}
+
+.vehicle-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.vehicle-card .actions {
+    margin-top: 10px;
+}
+
+.vehicle-card .book-btn, .vehicle-card .details-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.vehicle-card .book-btn {
+    background-color: yellow;
+    color: BLACK;
+}
+
+.vehicle-card .details-btn {
+    background-color: black;
+    color: white;
+}
