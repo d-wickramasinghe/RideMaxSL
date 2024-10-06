@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
         echo "Discount deleted successfully";
         header("Location: main.php");
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $con->error;
     }
 } else {
     header("Location: cus_userprofile.php");
