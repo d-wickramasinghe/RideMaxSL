@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel='stylesheet' type='text/css' href='styles/signup.css'>
     <script src='myScript.js'></script>
 </head>
+
 <body class="body">
     <nav class="navbar">
         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
@@ -34,17 +36,18 @@
         </div>
     </nav>
     <!--end of the header-->
-    
+
 
     <fieldset>
-        <legend>Create an New Account</legend>
+        <h2>Edit Account Details</h2>
 
-        <form method="post" action="driver_signup_insert.php">
+        <form method="POST" action="driver_edit_update.php">
 
-            
+            Driver ID : <br>
+            <input type="number" class="input" name="id"><br><br>
 
-        First Name : <br>
-        <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
+            First Name : <br>
+            <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
 
             Last Name : <br>
             <input type="text" class="input" name="lname" placeholder="Your Last name" required><br><br>
@@ -52,32 +55,32 @@
             Licence No : <br>
             <input type="text" class="input" name="licence" placeholder="Your License Number" required><br><br>
 
-        Email : <br>
-        <input type="email" class="input" name="email" placeholder="Your email" required><br><br>
+            Email : <br>
+            <input type="email" class="input" name="email" placeholder="Your email" required><br><br>
 
-        Address : <br>
-        <input type="text" class="input" name="address" placeholder="Your address" required><br><br>
+            Address : <br>
+            <input type="text" class="input" name="address" placeholder="Your address"><br><br>
 
-        Phone Number : <br>
-        <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
+            NIC : <br>
+            <input type="text" class="input" name="nic" placeholder="NIC number" required><br><br>
 
-        NIC : <br>
-        <input type="text" class="input" name="nic" placeholder="NIC number" required><br><br>
+            Phone Number : <br>
+            <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
 
-        Username : <br>
-        <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
+            Username : <br>
+            <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
 
-        Password : <br>
-        <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
+            Password : <br>
+            <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
 
-        <input type="submit" class="btn" value="Sign Up" href="home.php">
-    </form>
+            <input type="submit" class="btn" value="Update">
+        </form>
 
     </fieldset>
 
     <?php
-        include "footer.php";
+    include "footer.php";
     ?>
 </body>
-</html>
 
+</html>

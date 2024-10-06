@@ -16,7 +16,15 @@ $driver_password= $_POST["password"];
 $sql = "INSERT INTO driver VALUES('','$driver_fname','$driver_lname','$driver_licence','$driver_email','$driver_address','$driver_nic','$driver_contact','$driver_uname','$driver_password')";
 
 if($con->query($sql)){
-    echo "Insert Successfull";
+
+    $sql3 = "INSERT INTO user_login (email, password, user_type) 
+                 VALUES ('$c_email', '$c_password', 'customer')";
+
+
+
+
+    header("Location: home.php");
+    exit();
 }
 
 else{
