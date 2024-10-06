@@ -50,13 +50,14 @@ require 'config.php';
 
                 <form method="post" action="cus_edit.php">
                     <button type="submit" class="editbtn" name="editbtn">Edit</button>
-                <?form>
+                </form>
                 
 
                 <!-- Delete Form -->
                 <form method="post" action="cus_delete.php">
                     <button type="submit" class="editbtn" name="deletebtn" onclick="return confirm(\'Are you sure you want to delete your account?\');">Delete</button>
                 </form>
+
                 </fieldset>
                 </div>';
             } else {

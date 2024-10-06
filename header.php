@@ -16,8 +16,9 @@
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="vehicles.php">Vehicles</a></li>
+                <li><a href="car.php">Vehicles</a></li>
                 <li><a href="services.php">Services</a></li>
+                <li><a href="reservationread.php">Reservation</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="help.php">Help</a></li>
                 <li><a href="contactus.php">Contact Us</a></li>
@@ -32,7 +33,7 @@
             <br>
             <?php
             
-                echo '<a href="main.php" class="logoutbtn">Log out</a>';
+                echo '<a href="main.php" class="logoutbtn" onclick="return confirm(\'Are you sure you want to delete your account?\')";>Log out</a>';
             ?>
         </div>
     </nav>

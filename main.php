@@ -64,7 +64,6 @@
     <!--Start of Footer-->
     <footer class="footer">
         <div class="footer-div1">
-            <!-- Logo and Description -->
             <div class="footer-logo-section">
                 <a href="index.html">
                     <img src="images/logo/ride max sl (3).png" alt="Logo" class="footer-logo">
@@ -72,7 +71,6 @@
                 <p>Your trusted vehicle rental service, offering the best deals.</p>
             </div>
     
-            <!-- nav Links -->
             <div class="footer-link-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-ul">
@@ -85,13 +83,11 @@
                 </ul>
             </div>
     
-            <!-- Contact Information -->
             <div class="footer-contact">
                 <h3>Contact Us</h3>
                 <p>Email: support@ridemaxsl.com</p>
             </div>
     
-            <!-- Social Media Icons -->
             <div class="footer-social-media">
                 <h3>Follow Us</h3>
                 <a href="#"><img src="images/main_icon/facebook.jpg" alt="Facebook" class="social-icon"></a>
@@ -100,7 +96,6 @@
                 <a href="#"><img src="images/main_icon/linkedin.jpg" alt="LinkedIn" class="social-icon"></a>
             </div>
     
-            <!-- App Download Links -->
             <div class="footer-app-download">
                 <h3>Download Our App</h3>
                 <a href="#"><img src="images/main_icon/google play.png" alt="Google Play" class="app-icon"></a>
@@ -108,7 +103,6 @@
             </div>
         </div>
     
-        <!-- Newsletter Signup -->
         <div class="footer-email">
             <h3>Stay Updated</h3>
             <p class="footer-para1">Sign up to get the latest updates and offers.</p><br/>
@@ -118,7 +112,6 @@
             </form>
         </div>
     
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
         </div>
