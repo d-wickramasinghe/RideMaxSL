@@ -6,6 +6,8 @@
     <title>Ride Max SL-Login</title>
     <link rel='stylesheet' type='text/css' href='styles/login.css'>
     <script src='myScript.js'></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="body" >
 
@@ -56,6 +58,8 @@
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br>
+
+            <div class="g-recaptcha" data-sitekey="6LcIxlkqAAAAAKoVFvDvKHwwrMz_xJa75uMWV8lh"></div>
 
             <button type="submit" class="loginbtn">Login</button>
         </form>

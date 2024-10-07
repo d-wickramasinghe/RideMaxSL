@@ -6,41 +6,17 @@
     <title>Ride Max SL-SignUp</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/signup.css'>
-    <script src='myScript.js'></script>
+    <script src="myScript.js"></script>
 </head>
 <body class="body">
-<nav class="navbar">
-    <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
+<?php
+    include "header.php";
+?>
 
-        <div class="div1">
-            <h1 class="name">Welcome to Ride Max SL</h1>
-            <ul class="nav-links">
-                <li><a href="main.php">Home</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
+<fieldset>
+    <h2>Create a New Account</h2>
 
-        <div class="user-profile">
-            <a href="#"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
-        </div>
-
-        <div class="div2">
-            <a href="login.php" class="loginbtn">Log In</a>
-            <a href="registeras.php" class="loginbtn">Sign Up</a>
-        </div>
-    </nav>
-    <!--end of the header-->
-    
-
-    <fieldset>
-        <h2>Create an New Account</h2>
-
-        <form method="post" action="cus_signup_insert.php">
-
+    <form method="post" action="cus_signup_insert.php" onsubmit="return validatePassword()">
         First Name : <br>
         <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
 
@@ -63,19 +39,20 @@
         <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
 
         Password : <br>
-        <input type="password" id= "password" class="input" name="password" placeholder="Your password" required><br><br>
+        <input type="password" id="password" class="input" name="password" placeholder="Your password" required><br><br>
 
         Confirm Password : <br>
-        <input type="password" id= "confirm_password" class="input" name="password" placeholder="Confirm Your password" required><br><br>
+        <input type="password" id="confirm_password" class="input" placeholder="Confirm Your password" required><br><br>
+        
+        <!-- Error message for password doesn't match -->
+        <span id="error-message"></span><br><br>
 
-        <input type="submit" class="btn" value="Sign Up" href="home.php">
+        <input type="submit" class="btn" value="Sign Up">
     </form>
+</fieldset>
 
-    </fieldset>
-
-    <?php
-        include "footer.php";
-    ?>
+<?php
+    include "footer.php";
+?>
 </body>
 </html>
-
