@@ -22,9 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_type'] = $row['user_type'];
 
                 if ($user_type == 'customer') {
-                    header("Location: home.php"); // Customer's dashboard
+                    header("Location: home.php"); 
                 } else if ($user_type == 'driver') {
-                    header("Location: home.php"); // Driver's dashboard
+                    header("Location: home.php"); 
+                } else if ($user_type == 'admin') {
+                    header("Location: admin.php"); 
                 }
                 exit();
             } else {
