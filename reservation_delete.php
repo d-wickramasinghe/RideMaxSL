@@ -1,20 +1,20 @@
 <?php
-include 'config.php'; // Include database connection file
+include 'config.php';
 
-// Handle Delete
+
 if (isset($_GET['id'])) {
     $reservationId = $_GET['id'];
-    $sql = "DELETE FROM reservation WHERE reservation_id='$reservationId'";
+    $sql = "DELETE FROM reservation WHERE ID ='$reservationId'";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($con->query($sql) === TRUE) {
         echo "Reservation deleted successfully";
-        header("Location: reservationRead.php"); // Redirect to reservationRead.php after deletion
-        exit(); // Exit to prevent further script execution
+        header("Location: reservationRead.php");
+        exit(); 
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error; // Output error if deletion fails
+        echo "Error: " . $sql . "<br>" . $conn->error; 
     }
 } else {
-    header("Location: reservationRead.php"); // Redirect if no ID is set
-    exit(); // Exit to prevent further script execution
+    header("Location: reservationRead.php");
+    exit();
 }
 ?>

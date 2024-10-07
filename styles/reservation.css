@@ -47,3 +47,79 @@ body {
 .submit-btn:hover {
     background-color: #4cae4c;
 }
+.revform{
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+.field{
+    width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-radius: 8px;
+}
+.table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.theading{
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color:yellow;
+    color: black;
+    font-family:'Doppio One';
+    font-weight: normal;
+}
+.tdata{
+    padding: 12px 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: #462446;
+    font-family: Arial, sans-serif;
+}
+.tablerow:nth-child(even){
+background-color: #f2f2f2;
+}
+.tabledata:last-child {
+    text-align: center;
+    padding: 10px;
+} 
+.upbtn{
+    color: black;
+    text-decoration: #000000;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: green;
+    font-family:'Doppio One';
+    font-size: 15px;
+}
+.delbtn{
+    color: black;
+    text-decoration: #000000 ;
+    padding: 5px 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background-color: red;
+    font-family:'Doppio One';
+    font-size: 15px;
+}
+.fields{
+    width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            border-radius: 8px;
+}

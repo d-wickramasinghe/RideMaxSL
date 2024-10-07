@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Vehicle Rental Reservation</h2>
+
+    <!-- Reservation Form -->
+    <form action="process.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo isset($_GET['edit']) ? $reservation['id'] : ''; ?>">
+        <input type="text" name="pickup_location" placeholder="Pick Up Location" value="<?php echo isset($_GET['edit']) ? $reservation['pickup_location'] : ''; ?>" required><br>
+        <input type="text" name="return_location" placeholder="Return Location" value="<?php echo isset($_GET['edit']) ? $reservation['return_location'] : ''; ?>" required><br>
+        <input type="date" name="pickup_date" value="<?php echo isset($_GET['edit']) ? $reservation['pickup_date'] : ''; ?>" required><br>
+        <input type="date" name="return_date" value="<?php echo isset($_GET['edit']) ? $reservation['return_date'] : ''; ?>" required><br>
+        <select name="vehicle_type" required>
+            <option value="Car" <?php echo (isset($_GET['edit']) && $reservation['vehicle_type'] == 'Car') ? 'selected' : ''; ?>>Car</option>
+            <option value="SUV" <?php echo (isset($_GET['edit']) && $reservation['vehicle_type'] == 'SUV') ? 'selected' : ''; ?>>SUV</option>
+            <option value="Van" <?php echo (isset($_GET['edit']) && $reservation['vehicle_type'] == 'Van') ? 'selected' : ''; ?>>Van</option>
+        </select><br>
+        <button type="submit" name="<?php echo isset($_GET['edit']) ? 'update' : 'submit'; ?>">
+            <?php echo isset($_GET['edit']) ? 'Update' : 'Submit'; ?>
+        </button>
+    </form>
+
+    <h2>All Reservations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pick Up Location</th>
+                <th>Return Location</th>
+                <th>Pick Up Date</th>
+                <th>Return Date</th>
+                <th>Vehicle Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Fetch and display reservations (this part will be handled in process.php)
+            ?>
+        </tbody>
+    </table>
+
+</body>
+</html>

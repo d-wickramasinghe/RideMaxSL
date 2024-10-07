@@ -1,7 +1,5 @@
 <?php
-include 'config.php'; // Include database connection file
-
-// Handle Update
+include 'config.php';
 if (isset($_POST['update'])) {
     $reservationId = $_POST['reservationId'];
     $name = $_POST['name'];
@@ -12,37 +10,41 @@ if (isset($_POST['update'])) {
     $returnDate = $_POST['returnDate'];
     $pickupDate = $_POST['pickupDate'];
 
-    $sql = "UPDATE reservation SET name='$name', email='$email', vehicle_type='$vehicleType', 
-            no_of_passengers='$noOfPassengers', phone_number='$phoneNumber', return_date='$returnDate', 
-            pickup_date='$pickupDate' 
-            WHERE reservation_id='$reservationId'";
+    $sql = "UPDATE reservation SET name='$name', 
+        email='$email', 
+        vehicle_type='$vehicleType', 
+        no_of_passengers='$noOfPassengers', 
+        phone_number='$phoneNumber',    
+        return_date='$returnDate', 
+        pickup_date='$pickupDate' 
+        WHERE ID ='$reservationId'";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($con->query($sql) === TRUE) {
         echo "Reservation updated successfully";
-        header("Location: reservationRead.php");
+        echo "<script>window.location.href = ./reservationread.php';</script>";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $con->error;
     }
 }
 
-// Get reservation data for editing
 if (isset($_GET['id'])) {
     $reservationId = $_GET['id'];
-    $result = $conn->query("SELECT * FROM reservation WHERE reservation_id='$reservationId'");
+    $result = $con->query("SELECT * FROM reservation WHERE ID ='$reservationId'");
     $reservation = $result->fetch_assoc();
 } else {
-    header("Location: reservationRead.php");
+    header("Location: reservationread.php");
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/crud.css">
+    <link rel="stylesheet" type="text/css" href="styles/reservation.css">
 </head>
 <body>
 
@@ -52,34 +54,36 @@ if (isset($_GET['id'])) {
     ?>
     <br>
 
-    <h1 class="pagetitle70">Update Reservation</h1>
-    <form class="emform" method="POST" action="">
-        <input type="hidden" name="reservationId" value="<?php echo $reservation['reservation_id']; ?>">
+    <fieldset class="fields">
+    <center><h1 class="title">Update Reservation</h1>
+    <form class="revform" method="POST" action="#"> 
 
-        <label class="formlable">Name:</label><br>
-        <input class="forminput" type="text" name="name" value="<?php echo $reservation['name']; ?>" required><br>
+    <input class="forminput" type="hidden" name="reservationId" value="<?php echo $reservation['ID']; ?>"><br><br>
+
+    <label class="revlable">Name:</label><br>
+    <input class="forminput" type="text" name="name" value="<?php echo $reservation['name']; ?>" required><br><br>
         
-        <label class="formlable">Email:</label><br>
-        <input class="forminput" type="email" name="email" value="<?php echo $reservation['email']; ?>" required><br>
+    <label class="revlable">Email:</label><br>
+    <input class="forminput" type="email" name="email" value="<?php echo $reservation['email']; ?>" required><br><br>
 
-        <label class="formlable">Vehicle Type:</label><br>
-        <input class="forminput" type="text" name="vehicleType" value="<?php echo $reservation['vehicle_type']; ?>" required><br>
+    <label class="revlable">Vehicle Type:</label><br>
+    <input class="forminput" type="text" name="vehicleType" value="<?php echo $reservation['vehicle_type']; ?>" required><br><br>
 
-        <label class="formlable">Number of Passengers:</label><br>
-        <input class="forminput" type="number" name="noOfPassengers" value="<?php echo $reservation['no_of_passengers']; ?>" required><br>
+    <label class="revlable">Number of Passengers:</label><br>
+    <input class="forminput" type="number" name="noOfPassengers" value="<?php echo $reservation['no_of_passengers']; ?>" required><br><br>
 
-        <label class="formlable">Phone Number:</label><br>
-        <input class="forminput" type="text" name="phoneNumber" value="<?php echo $reservation['phone_number']; ?>" required><br>
+    <label class="revlable">Phone Number:</label><br>
+    <input class="forminput" type="text" name="phoneNumber" value="<?php echo $reservation['phone_number']; ?>" required><br><br>
 
-        <label class="formlable">Return Date:</label><br>
-        <input class="forminput" type="date" name="returnDate" value="<?php echo $reservation['return_date']; ?>" required><br>
+    <label class="revlable">Return Date:</label><br>
+    <input class="forminput" type="date" name="returnDate" value="<?php echo $reservation['return_date']; ?>" required><br><br>
 
-        <label class="formlable">Pickup Date:</label><br>
-        <input class="forminput" type="date" name="pickupDate" value="<?php echo $reservation['pickup_date']; ?>" required><br>
+    <label class="revlable">Pickup Date:</label><br>
+    <input class="forminput" type="date" name="pickupDate" value="<?php echo $reservation['pickup_date']; ?>" required><br><br>
 
-        <input class="submitbtn" type="submit" name="update" value="Update Reservation">
+    <input class="submitbtn" type="submit" name="update" value="Update Reservation">
     </form>
-    <a class="viewbtn" href="reservationRead.php">Back to Reservations</a>
+    <a class="viewbtn" href="reservationread.php">Back to Reservations</a></center></fieldset>
 
     <?php
         include 'footer.php';
