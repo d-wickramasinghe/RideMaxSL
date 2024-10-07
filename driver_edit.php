@@ -70,7 +70,7 @@ require 'config.php';
                 <input type="text" class="input" name="address" value="<?php echo $driver_address ?>"><br><br>
 
                 NIC : <br>
-                <input type="text" class="input" name="nic" value="<?php echo $driver_nic ?>" required><br><br>
+                <input type="number" class="input" name="nic" value="<?php echo $driver_nic ?>" required><br><br>
 
                 Phone Number : <br>
                 <input type="text" class="input" name="contact" value="<?php echo $driver_contact ?>" required><br><br>
