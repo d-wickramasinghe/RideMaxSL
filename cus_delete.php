@@ -1,18 +1,28 @@
 <?php
-include 'config.php'; // Include database connection file
+session_start();
+require 'config.php';
 
-// Handle Delete
-if (isset($_GET['id'])) {
-    $customer_id = $_GET['id'];
-    $sql = "DELETE FROM customer WHERE customer_id='$customer_id'";
+if (isset($_POST['deletebtn']) ) {
+    
+    $customer_id = $_POST['deleteid'];
+    $email = $_POST['deleteid'];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Discount deleted successfully";
+    $sql1 = "DELETE FROM customer WHERE email='$customer_id'";
+    $sql2 = "DELETE FROM user_login WHERE email='$email'";
+
+    if ($con->query($sql1) === TRUE && $con->query($sql2) === TRUE) {
+        // echo "Customer deleted successfully";
+        // echo "<scipt> window.location.href='./main.php'; </script>";
+        // exit(); 
+
         header("Location: main.php");
+        exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $con->error;
+        error_log("Error deleting records: " . $con->error); 
+        echo "Error: " . $con->error; 
     }
 } else {
     header("Location: cus_userprofile.php");
+    exit(); 
 }
 ?>

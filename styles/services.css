@@ -1,37 +1,56 @@
 
-section#services {
-    padding: 20px;
+.body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/car-tire-closeup-auto-repair-shop-amidst-vehicles-being-serviced-concept-auto-repair-car-tire-vehicle-servicing-workplace-environment-closeup-shot_918839-376703.jpg?w=1380');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    color: #fff; 
+}
+
+
+
+.section {
+    padding: 50px 20px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service {
-    background-color: white;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.heading {
+    font-size: 2.5em;
+    color: #5c7a16;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-.service h3 {
-    margin-top: 0;
+.services {
+    background-color: #0b3057;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.services:hover {
+    transform: translateY(-10px);
 }
 
-button:hover {
-    background-color: #555;
+.titles {
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-.details {
-    margin-top: 10px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-left: 5px solid #333;
+.service p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
+

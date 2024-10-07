@@ -7,7 +7,7 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-// Check if the edit button was pressed
+
 if (isset($_POST['editbtn'])) {
     $customer_id = $_POST['id'];
     $first_name = $_POST['fname'];

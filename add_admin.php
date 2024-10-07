@@ -37,27 +37,27 @@
             ?>
         </div>
     </nav>
-    
-    <button onclick="window.location.href='add_admin.php';"style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">Add Admin</button>
-   
 
 
     
-    <button onclick="window.location.href='dis_admin.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">View Admins</button>
-    <br>
+    <fieldset class="fieldset">
+    <h2>New Admin</h2>
+        <form method ="post" action= "add_admin_insert.php">
+           
 
+            Name : <br>
+            <input type = "text" name= "name" class="input"><br><br>
+            Email : <br>
+            <input type = "email" name= "email" class="input"><br><br>
+            Username : <br>
+            <input type = "text" name= "username" class="input"><br><br>
+            Password : <br>
+            <input type = "password" name= "password" class="input"><br><br>
 
-    <button onclick="window.location.href='cus_signup.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">Add User</button>
-    
+            <button type= "Submit" name="submit" value="submit" class="btn">Submit</button>
 
-
-   
-    <button onclick="window.location.href='view_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">View Users</button>
-    
-
-
-
-
+</form>
+</fieldset>
 
 
     <?php include "footer.php"; ?>

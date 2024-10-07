@@ -13,8 +13,9 @@
 require 'config.php';
 session_start();
 
-$id = $_SESSION['cus_id'];
-$sql = "SELECT * FROM customer WHERE  customer_id = '$id'";
+$id = $_SESSION['email'];
+
+$sql = "SELECT * FROM customer WHERE  email = '$id'";
 
 $result = $con->query($sql);
 $row = $result->fetch_assoc();
@@ -24,13 +25,13 @@ $row = $result->fetch_assoc();
 <div class="editdiv1">
     <h1>Edit Profile</h1>
     <form method="post" action="cus_edit_update.php">
-        <input type="hidden" name="c_id" value="<?php echo ($row['customer_id']); ?>">
+        <input type="hidden" name="c_id" value="<?php echo $row['customer_id']; ?>">
 
         <label for="fname" class="lbl">First Name:</label><br>
-        <input type="text" class ="input" name="fname" value="<?php echo ($row['first_name']); ?>" required><br>
+        <input type="text" class ="input" name="fname" value="<?php echo $row['first_name']; ?>" required><br>
 
         <label for="lname" class="lbl">Last Name:</label><br>
-        <input type="text" class ="input" name="lname" value="<?php echo ($row['last_name']); ?>" required><br>
+        <input type="text" class ="input" name="lname" value="<?php echo $row['last_name']; ?>" required><br>
 
         <label for="email" class="lbl">Email:</label><br>
         <input type="email" class ="input" name="email" value="<?php echo ($row['email']); ?>" required><br>

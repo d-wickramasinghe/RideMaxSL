@@ -62,7 +62,7 @@
         <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
 
         NIC : <br>
-        <input type="text" class="input" name="nic" placeholder="NIC number" required><br><br>
+        <input type="number" class="input" name="nic" placeholder="NIC number" required><br><br>
 
         Username : <br>
         <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
