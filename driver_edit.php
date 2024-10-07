@@ -1,3 +1,7 @@
+<?php
+require 'config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,72 +15,77 @@
 </head>
 
 <body class="body">
-    <nav class="navbar">
-        <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
 
-        <div class="div1">
-            <h1 class="name">Welcome to Ride Max SL</h1>
-            <ul class="nav-links">
-                <li><a href="main.php">Home</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </div>
+    <?php
+    include 'header.php';
+    
+    $id = $_SESSION['dri_id'];
+    $sql = "SELECT * FROM driver WHERE driver_id='$id'";
+    $result = $con->query($sql);
 
-        <div class="user-profile">
-            <a href="#"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
-        </div>
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
 
-        <div class="div2">
-            <a href="login.php" class="loginbtn">Log In</a>
-            <a href="registeras.php" class="loginbtn">Sign Up</a>
-        </div>
-    </nav>
-    <!--end of the header-->
+        $driver_id = $row['driver_id'];
+        $driver_fname = $row['first_name'];
+        $driver_lname = $row['last_name'];
+        $driver_licence = $row['licence_No'];
+        $driver_email = $row['email'];
+        $driver_address = $row['address'];
+        $driver_nic = $row['nic'];
+        $driver_contact = $row['phone_number'];
+        $driver_uname = $row['username'];
+        $driver_password = $row['password'];
+    }
+    else{
+        echo "No driver record found!";
+        exit();
+    }
+
+    ?>
 
 
-    <fieldset>
-        <h2>Edit Account Details</h2>
+    <div>
+        <fieldset>
+            <h2>Edit Profile Details</h2>
 
-        <form method="POST" action="driver_edit_update.php">
+            <form action="driver_edit_update.php" method="POST">
 
-            Driver ID : <br>
-            <input type="number" class="input" name="id"><br><br>
+                Driver ID : <br>
+                <input type="number" class="input" name="id" value="<?php echo $driver_id ?>" readonly><br><br>
 
-            First Name : <br>
-            <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
+                First Name : <br>
+                <input type="text" class="input" name="fname" value="<?php echo $driver_fname ?>" required><br><br>
 
-            Last Name : <br>
-            <input type="text" class="input" name="lname" placeholder="Your Last name" required><br><br>
+                Last Name : <br>
+                <input type="text" class="input" name="lname" value="<?php echo $driver_lname ?>" required><br><br>
 
-            Licence No : <br>
-            <input type="text" class="input" name="licence" placeholder="Your License Number" required><br><br>
+                Licence No : <br>
+                <input type="text" class="input" name="licence" value="<?php echo $driver_licence ?>" required><br><br>
 
-            Email : <br>
-            <input type="email" class="input" name="email" placeholder="Your email" required><br><br>
+                Email : <br>
+                <input type="email" class="input" name="email" value="<?php echo $driver_email ?>" required><br><br>
 
-            Address : <br>
-            <input type="text" class="input" name="address" placeholder="Your address"><br><br>
+                Address : <br>
+                <input type="text" class="input" name="address" value="<?php echo $driver_address ?>"><br><br>
 
-            NIC : <br>
-            <input type="text" class="input" name="nic" placeholder="NIC number" required><br><br>
+                NIC : <br>
+                <input type="text" class="input" name="nic" value="<?php echo $driver_nic ?>" required><br><br>
 
-            Phone Number : <br>
-            <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
+                Phone Number : <br>
+                <input type="text" class="input" name="contact" value="<?php echo $driver_contact ?>" required><br><br>
 
-            Username : <br>
-            <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
+                Username : <br>
+                <input type="text" class="input" name="uname" value="<?php echo $driver_uname ?>" required><br><br>
 
-            Password : <br>
-            <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
+                Password : <br>
+                <input type="password" class="input" name="password" value="<?php echo $driver_password ?> " required><br><br>
 
-            <input type="submit" class="btn" value="Update">
-        </form>
+                <input type="submit" class="btn" name="submit" value="Update">
+            </form>
 
-    </fieldset>
+        </fieldset>
+    </div>
 
     <?php
     include "footer.php";
