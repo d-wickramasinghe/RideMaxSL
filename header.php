@@ -1,6 +1,10 @@
+<?php
+require 'config.php';
+?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +12,7 @@
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <script src='myScript.js'></script>
 </head>
+
 <body class="body">
     <nav class="navbar">
         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
@@ -26,16 +31,36 @@
         </div>
 
         <div class="user-profile">
-            <a href="cus_userprofile.php"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
+            <?php
+            session_start();
+            $userId = $_SESSION["user_id"];
+            $sql_user = "SELECT user_type FROM user_login WHERE user_id=$userId";
+            $result_user = mysqli_query($con, $sql_user);
+            $profileUrl = 'cus_userprofile.php';
+
+            if ($result_user) {
+                if (mysqli_num_rows($result_user) > 0) {
+                    $row = mysqli_fetch_assoc($result_user);
+                    if ($row['user_type'] === 'driver') {
+                        $profileUrl = 'driver_profile.php';
+                    } elseif ($row['user_type'] === 'admin') {
+                        $profileUrl = 'admin_profile.php';
+                    }
+                }
+            }
+
+            echo '<a href="' . $profileUrl . '"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>';
+
+            ?>
         </div>
 
         <div class="div2">
             <br>
             <?php
-            
-                echo '<a href="main.php" class="logoutbtn" onclick="return confirm(\'Are you sure you want to delete your account?\')";>Log out</a>';
+            echo '<a href="main.php" class="logoutbtn" onclick="return confirm(\'Are you sure you want to logout from your account?\')";>Log out</a>';
             ?>
         </div>
     </nav>
 </body>
+
 </html>
