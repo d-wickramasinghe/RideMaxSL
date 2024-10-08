@@ -15,12 +15,12 @@
         <div class="div1">
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
-                <li><a href="main.php">Home</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact Us</a></li>
+            <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Vehicles</a></li>
+                <li><a href="login.php">Services</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="login.php">Help</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
             </ul>
         </div>
 

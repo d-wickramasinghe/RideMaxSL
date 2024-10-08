@@ -4,7 +4,7 @@ session_start();
 
 if (!isset($_SESSION["user_id"])) 
 {
-    header('Location: main.php'); 
+    header('Location: index.php'); 
     exit();
 }
 
@@ -66,7 +66,7 @@ if ($result_user) {
 
         <div class="div2">
             <br>
-            <a href="main.php" class="logoutbtn" onclick="return confirm('Are you sure you want to logout from your account?');">Log out</a>
+            <a href="index.php" class="logoutbtn" onclick="return confirm('Are you sure you want to logout from your account?');">Log out</a>
         </div>
     </nav>
 </body>

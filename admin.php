@@ -33,7 +33,7 @@
             <br>
             <?php
             
-                echo '<a href="main.php" class="logoutbtn">Log out</a>';
+                echo '<a href="index.php" class="logoutbtn">Log out</a>';
             ?>
         </div>
     </nav>

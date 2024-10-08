@@ -21,7 +21,7 @@ if ($con->query($sql1) === TRUE) {
 
  
         if ($con->query($sql3) === TRUE) {
-            header("Location: main.php");
+            header("Location: index.php");
             exit();
         } else {
             echo "Error inserting into user_login: " . $con->error;

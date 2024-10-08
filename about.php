@@ -10,7 +10,33 @@
 <body class="body">
     
 
-    <?php include "header.php"; ?>
+<nav class="navbar">
+         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
+
+        <div class="div1">
+            <h1 class="name">Welcome to Ride Max SL</h1>
+            <ul class="nav-links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Vehicles</a></li>
+                <li><a href="login.php">Services</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="login.php">Help</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="user-profile">
+            <a href="#"><img src="images/main_icon/user.png" alt="User Profile" class="profile-photo"></a>
+        </div>
+
+        <div class="div2">
+            <?php
+                include "read.php";
+            ?>
+            <a href="login.php" class="loginbtn1">Log In</a>
+            <a href="registeras.php" class="loginbtn1">Sign Up</a>
+        </div>
+    </nav>
 
     <main>
         <section class="about-section">

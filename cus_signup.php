@@ -6,7 +6,7 @@
     <title>Ride Max SL-SignUp</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/signup.css'>
-    <script src="myScript.js"></script>
+    <script src="js/myScript.js"></script>
 </head>
 <body class="body">
 <?php
@@ -47,7 +47,7 @@
         <!-- Error message for password doesn't match -->
         <span id="error-message"></span><br><br>
 
-        <input type="submit" class="btn" value="Sign Up">
+        <input type="submit" class="btn" value="Sign Up" onclick="">
     </form>
 </fieldset>
 

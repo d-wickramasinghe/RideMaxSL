@@ -12,10 +12,10 @@ if (isset($_POST['deletebtn']) ) {
 
     if ($con->query($sql1) === TRUE && $con->query($sql2) === TRUE) {
         // echo "Customer deleted successfully";
-        // echo "<scipt> window.location.href='./main.php'; </script>";
+        // echo "<scipt> window.location.href='./index.php'; </script>";
         // exit(); 
 
-        header("Location: main.php");
+        header("Location: index.php");
         exit();
     } else {
         error_log("Error deleting records: " . $con->error); 

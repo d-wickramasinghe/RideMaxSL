@@ -23,7 +23,7 @@ if ($con->query($sql)) {
     if($con->query($sql2)===TRUE)
     {
         echo "<script>alert('Data Added Successfully!')</script>";
-        header("Location: home.php");
+        header("Location: index.php");
     }
     else
     {

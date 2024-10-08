@@ -17,7 +17,7 @@ if($result->num_rows>0){
     $sql2 = "DELETE FROM user_login WHERE email = '$driver_email'";
 
     if($con->query($sql1)===TRUE && $con->query($sql2)===TRUE){
-        session_destroy();
+        unset($_SESSION['dri_id']);
         header("Location: login.php");
         exit();
     }
