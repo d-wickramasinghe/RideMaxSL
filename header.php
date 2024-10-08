@@ -39,6 +39,7 @@ if ($result_user) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL - Home</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
 

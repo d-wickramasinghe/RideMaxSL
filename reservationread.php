@@ -18,6 +18,7 @@ if (!$reservation) {
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="styles/crud.css">
     <link rel="stylesheet" type="text/css" href="styles/reservation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 

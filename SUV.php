@@ -6,6 +6,7 @@
     <title>Ride Max SL-Home</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/home.css'>
+    
     <script src='myScript.js'></script>
 </head>
 <body class="body">

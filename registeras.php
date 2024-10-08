@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL-Login</title>
     <link rel='stylesheet' type='text/css' href='styles/loginas.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
 <body class="body">
@@ -77,7 +78,7 @@
                     <li class="footer-list"><a href="services.php">Services</a></li>
                     <li class="footer-list"><a href="about.php">About Us</a></li>
                     <li class="footer-list"><a href="contact.php">Contact</a></li>
-                    <li class="footer-list"><a href="faq.php">FAQ</a></li>
+                    <li class="footer-list"><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
     

@@ -6,6 +6,8 @@
     <title>Ride Max SL-Home</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/home.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <script src='myScript.js'></script>
 </head>
 <body class="body">
@@ -58,8 +60,7 @@
         }
 
         setInterval(showNextImage, 3000);
-    </script>
-
+    </script>  
 
     <!--Start of Footer-->
     <footer class="footer">

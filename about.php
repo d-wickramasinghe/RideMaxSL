@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' href='styles/about.css'>
     <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
 <body class="body">
