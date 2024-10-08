@@ -95,7 +95,7 @@
                 </ul>
             </div>
             <div class="footer-bottom">
-            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.php">Terms & Conditions</a></p>
         </div>
     </footer>
     

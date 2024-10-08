@@ -62,7 +62,7 @@
         <div class="footer-div1">
             <!-- Logo and Description -->
             <div class="footer-logo-section">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="images/logo/ride max sl (3).png" alt="Logo" class="footer-logo">
                 </a>
                 <p>Your trusted vehicle rental service, offering the best deals.</p>
@@ -116,7 +116,7 @@
     
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.php">Terms & Conditions</a></p>
         </div>
     </footer>
 </body>

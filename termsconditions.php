@@ -13,7 +13,7 @@
         <div class="div1">
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="vehicles.html">Vehicles</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
@@ -90,7 +90,7 @@ Enter your code below-->
         <div class="footer-div1">
             <!-- Logo and Description -->
             <div class="footer-logo-section">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="logo.png" alt="Logo" class="footer-logo">
                 </a>
                 <p>Your trusted vehicle rental service, offering the best deals.</p>
@@ -144,7 +144,7 @@ Enter your code below-->
     
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <p class="footer-para2">&copy; 2024 Vehicle Rental. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="termsconditions.php">Terms & Conditions</a></p>
         </div>
     </footer>
     
