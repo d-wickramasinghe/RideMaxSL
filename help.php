@@ -7,6 +7,7 @@
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/home.css'>
     <link rel='stylesheet' type='text/css' href='styles/about.css'>
+    <link rel='stylesheet' type='text/css' href='styles/help.css'>
     <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
     <script src='myScript.js'></script>
@@ -23,7 +24,7 @@
             <h2>Frequently Asked Questions (FAQ)</h2>
 
             <h3 class="headings">1. How do I make a booking?</h3>
-            <p class="para">To book a vehicle, simply visit our <a href="booking.php">Booking Page</a>, select your desired vehicle, dates, and location, then follow the on-screen instructions to complete your reservation.</p>
+            <p class="para">To book a vehicle, simply visit our <a href="vehicle_rental.php">Booking Page</a>, select your desired vehicle, dates, and location, then follow the on-screen instructions to complete your reservation.</p>
 
             <h3 class="headings">2. What documents do I need to rent a vehicle?</h3>
             <p class="para">You will need a valid driver's license, a credit card, and a form of government-issued ID (such as a passport or national ID) at the time of booking and pick-up.</p>

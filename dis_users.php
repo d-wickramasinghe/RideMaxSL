@@ -7,7 +7,7 @@ require 'config.php';
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ride Max SL - Admin List</title>
+    <title>Ride Max SL - User List</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/admin.css'>
     <link rel='stylesheet' type='text/css' href='styles/display.css'>
@@ -19,36 +19,38 @@ require 'config.php';
     <?php include 'header.php'; ?>
 
     <div class="container">
-        <h1 align="center">Admin Data Display</h1>
+        <h1 align="center">User Data Display</h1>
         <table class="admin-table" align="center" border="1">
             <thead>
                 <tr>
-                    <th>Admin ID</th>   
-                    <th>Admin Name</th>   
-                    <th>Admin Email</th>   
-                    <th>Admin Username</th>   
-                    <th>Admin Password</th>   
-                    <th>Actions</th> 
+                    <th>Customer ID</th>   
+                    <th>First Name</th>  
+                    <th>Last Name</th> 
+                    <th>Customer Email</th>   
+                    <th>Customer address</th>   
+                    <th>NIC</th>   
+                    <th>Phone Number</th> 
+                    <th>Customer Username</th>
                 </tr>
             </thead>
             <tbody>
 
             <?php
-            $sql = "SELECT admin_id, name, email, username, password FROM admin";
+            $sql = "SELECT customer_id, first_name, last_name, email, address, nic, c_phone, username FROM customer";
             $result = $con->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    echo "<td>" . $row["admin_id"] . "</td>";
-                    echo "<td>" . $row["name"] . "</td>";
+                    echo "<td>" . $row["customer_id"] . "</td>";
+                    echo "<td>" . $row["first_name"] . "</td>";
+                    echo "<td>" . $row["last_name"] . "</td>";
                     echo "<td>" . $row["email"] . "</td>";
+                    echo "<td>" . $row["address"] . "</td>";
+                    echo "<td>" . $row["nic"] . "</td>";
+                    echo "<td>" . $row["c_phone"] . "</td>";
                     echo "<td>" . $row["username"] . "</td>";
-                    echo "<td>" . $row["password"] . "</td>";
-                    echo "<td>
-                            <a href='admin_update.php?admin_id=" . $row["admin_id"] . "'><button class='update-btn'>Update</button></a>
-                            <a href='admin_delete.php?delete_id=" . $row["admin_id"] . "' onclick='return confirm(\"Are you sure?\")'><button class='delete-btn'>Delete</button></a>
-                          </td>";
+                    
                     echo "</tr>";
                 }
             } else {

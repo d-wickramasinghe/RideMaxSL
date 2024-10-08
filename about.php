@@ -102,9 +102,9 @@
                 </p>
 
                 <ul>
-                    <li class="list"><strong>Phone: </strong> +1 800 123 4567</li>
-                    <li class="list"><strong>Email: </strong> info@ridemaxsl.com</li>
-                    <li class="list"><strong>Location: </strong> 123 Main Street, City, Country</li>
+                    <li class="list"><strong>Phone: </strong> 011-2224585 </li>
+                    <li class="list"><strong>Email: </strong> support@ridemaxsl.com</li>
+                    <li class="list"><strong>Location: </strong> 256 Main Street, Malabe, Sri Lanka</li>
                 </ul>
 <<<<<<< Updated upstream
             </div>

@@ -49,7 +49,7 @@
 
 
    
-    <button onclick="window.location.href='view_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Users</button>
+    <button onclick="window.location.href='dis_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Users</button>
     
 </div>
 
