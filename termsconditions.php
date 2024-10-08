@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <title>Ride Max SL- Termsandcondition</title>
     <link rel='stylesheet' type='text/css' href='styles/terms.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
 <body class="body">

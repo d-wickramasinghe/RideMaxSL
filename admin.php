@@ -7,6 +7,7 @@
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/signup.css'>
     <link rel='stylesheet' type='text/css' href='styles/admin.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
 <body class="body">
