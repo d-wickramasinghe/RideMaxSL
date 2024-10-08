@@ -78,7 +78,7 @@
                     <li class="footer-list"><a href="services.php">Services</a></li>
                     <li class="footer-list"><a href="about.php">About Us</a></li>
                     <li class="footer-list"><a href="contact.php">Contact</a></li>
-                    <li class="footer-list"><a href="faq.php">FAQ</a></li>
+                    <li class="footer-list"><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
     
