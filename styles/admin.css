@@ -7,4 +7,18 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     border-radius: 8px;
 }
+/* Styling for buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
 
+.btn:hover {
+    background-color: #45a049;
+}

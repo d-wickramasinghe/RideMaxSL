@@ -14,10 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Hash the password for security
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare update statement
     $sql = "UPDATE admin SET name = ?, email = ?, username = ?, password = ? WHERE admin_id = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("ssssi", $name, $email, $username, $hashed_password, $id);

@@ -37,24 +37,21 @@
             ?>
         </div>
     </nav>
-    
-    <button onclick="window.location.href='add_admin.php';"style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">Add Admin</button>
+    <div align="center">
+    <button onclick="window.location.href='add_admin.php';"style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">Add Admin</button>
    
 
 
     
-    <button onclick="window.location.href='dis_admin.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">View Admins</button>
-    <br>
-
-
-    <button onclick="window.location.href='cus_signup.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">Add User</button>
+    <button onclick="window.location.href='dis_admin.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Admins</button>
+    
     
 
 
    
-    <button onclick="window.location.href='view_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px">View Users</button>
+    <button onclick="window.location.href='view_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Users</button>
     
-
+</div>
 
 
 

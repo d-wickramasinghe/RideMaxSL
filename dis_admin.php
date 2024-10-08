@@ -18,8 +18,8 @@ require 'config.php';
     <?php include 'header.php'; ?>
 
     <div class="container">
-        <h1>Admin Data Display</h1>
-        <table class="admin-table">
+        <h1 align="center">Admin Data Display</h1>
+        <table class="admin-table" align="center" border="1">
             <thead>
                 <tr>
                     <th>Admin ID</th>   
