@@ -9,9 +9,9 @@
     <link href='https://fonts.googleapis.com/css?family=Doppio One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script src='myScript.js'></script>
+    <script src='aboutScript.js'></script>
 </head>
-<body class="body">
+<body class="body" >
     
 
 <nav class="navbar">

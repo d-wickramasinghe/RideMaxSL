@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL-Home</title>
-    <link rel='stylesheet' type='text/css' href='styles/main.css'>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
     <link rel='stylesheet' type='text/css' href='styles/home.css'>
     <link rel='stylesheet' type='text/css' href='styles/about.css'>
     <link rel='stylesheet' type='text/css' href='styles/help.css'>
@@ -24,23 +24,35 @@
 
             <h2>Frequently Asked Questions (FAQ)</h2>
 
-            <h3 class="headings">1. How do I make a booking?</h3>
-            <p class="para">To book a vehicle, simply visit our <a href="vehicle_rental.php">Booking Page</a>, select your desired vehicle, dates, and location, then follow the on-screen instructions to complete your reservation.</p>
+            <div class="faq-card">
+                <h3 class="headings">1. How do I make a booking?</h3>
+                <p class="para">To book a vehicle, simply visit our <a href="vehicle_rental.php">Booking Page</a>, select your desired vehicle, dates, and location, then follow the on-screen instructions to complete your reservation.</p>
+            </div>
 
-            <h3 class="headings">2. What documents do I need to rent a vehicle?</h3>
-            <p class="para">You will need a valid driver's license, a credit card, and a form of government-issued ID (such as a passport or national ID) at the time of booking and pick-up.</p>
+            <div class="faq-card">
+                <h3 class="headings">2. What documents do I need to rent a vehicle?</h3>
+                <p class="para">You will need a valid driver's license, a credit card, and a form of government-issued ID (such as a passport or national ID) at the time of booking and pick-up.</p>
+            </div>
 
-            <h3 class="headings">3. Can I modify or cancel my booking?</h3>
-            <p class="para">Yes, you can modify or cancel your booking through the <a href="my-bookings.php">My Bookings</a> section. Please note that cancellation policies may apply, depending on the time of cancellation.</p>
+            <div class="faq-card">
+                <h3 class="headings">3. Can I modify or cancel my booking?</h3>
+                <p class="para">Yes, you can modify or cancel your booking through the <a href="my-bookings.php">My Bookings</a> section. Please note that cancellation policies may apply, depending on the time of cancellation.</p>
+            </div>
 
-            <h3 class="headings">4. How can I contact customer service?</h3>
-            <p class="para">You can reach our customer service team 24/7 via phone, email, or live chat. Visit our <a href="contact.php">Contact Us</a> page for more details.</p>
+            <div class="faq-card">
+                <h3 class="headings">4. How can I contact customer service?</h3>
+                <p class="para">You can reach our customer service team 24/7 via phone, email, or live chat. Visit our <a href="contact.php">Contact Us</a> page for more details.</p>
+            </div>
 
-            <h3 class="headings">5. What payment methods are accepted?</h3>
-            <p class="para">We accept major credit cards (Visa, MasterCard, American Express), PayPal, and other local payment options.</p>
+            <div class="faq-card">
+                <h3 class="headings">5. What payment methods are accepted?</h3>
+                <p class="para">We accept major credit cards (Visa, MasterCard, American Express), PayPal, and other local payment options.</p>
+            </div>
 
-            <h3 class="headings">6. What happens if my vehicle breaks down?</h3>
-            <p class="para">If your vehicle breaks down, please contact our 24/7 roadside assistance team immediately. The contact number will be provided with your rental agreement.</p>
+            <div class="faq-card">
+                <h3 class="headings">6. What happens if my vehicle breaks down?</h3>
+                <p class="para">If your vehicle breaks down, please contact our 24/7 roadside assistance team immediately. The contact number will be provided with your rental agreement.</p>
+            </div>
 
             <h2 class="headings">Still Need Help?</h2>
             <p class="para">If you didn't find the answer you're looking for, feel free to contact us using one of the following options:</p>
@@ -58,16 +70,22 @@
             <p class="para">To review our terms and conditions, please visit the <a href="terms.php">Terms and Conditions</a> page.</p>
             <h2 class="headings">Privacy Policy</h2>
             <p class="para">We take your privacy seriously. Read our full privacy policy <a href="privacy.php">here</a>.</p>
-            </div>
         </div>
-    
     </div>
-    <?php include "footer.php"; ?>
-</body>
 
-<?php
-        include "footer.php";
-    ?>
+    <?php include "footer.php"; ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const faqHeadings = document.querySelectorAll('.faq-card h3');
+    
+    faqHeadings.forEach(heading => {
+        heading.addEventListener('click', function() {
+            const card = this.closest('.faq-card');
+            card.classList.toggle('active');
+        });
+    });
+});
+
+    </script>
 </body>
-</html>
 </html>

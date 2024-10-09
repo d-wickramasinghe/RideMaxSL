@@ -11,7 +11,7 @@
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body class="body" >
+<body class="body" style="background-image: url('newbg.jpg');">
 
     <nav class="navbar">
          <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">

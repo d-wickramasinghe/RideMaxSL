@@ -4,13 +4,12 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL-Home</title>
-    <link rel='stylesheet' type='text/css' href='styles/main.css'>
-    <link rel='stylesheet' type='text/css' href='styles/signup.css'>
+ 
     <link rel='stylesheet' type='text/css' href='styles/admin.css'>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src='myScript.js'></script>
 </head>
-<body class="body">
+<body class="body" style="background-image:url('carbg.jpg');">
     <nav class="navbar">
         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
 
@@ -33,30 +32,17 @@
         <div class="div2">
             <br>
             <?php
-            
                 echo '<a href="index.php" class="logoutbtn">Log out</a>';
             ?>
         </div>
     </nav>
-    <div align="center">
-    <button onclick="window.location.href='add_admin.php';"style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">Add Admin</button>
-   
 
-
-    
-    <button onclick="window.location.href='dis_admin.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Admins</button>
-    
-    
-
-
-   
-    <button onclick="window.location.href='dis_users.php';" style=" font-size: 25px; background-color: grey; color:lightblue; border-radius:25px" class="btn1">View Users</button>
-    
-</div>
-
-
-
-
+    <!-- Button container -->
+    <div class="buttons">
+        <button onclick="window.location.href='add_admin.php';" class="btn1">Add Admin</button>
+        <button onclick="window.location.href='dis_admin.php';" class="btn1">View Admins</button>
+        <button onclick="window.location.href='dis_users.php';" class="btn1">View Users</button>
+    </div>
 
     <?php include "footer.php"; ?>
 </body>
