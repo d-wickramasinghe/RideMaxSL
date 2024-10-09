@@ -20,7 +20,6 @@ require 'config.php';
     if (isset($_SESSION['email'])) {
         $email = $_SESSION['email'];
 
-        // Fetch customer details using the email from the session
         $sql = "SELECT * FROM customer WHERE email = '$email'";
         $result = $con->query($sql);
     

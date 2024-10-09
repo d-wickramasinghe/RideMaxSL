@@ -13,7 +13,7 @@
     <?php
         include "header.php";
     ?>
-<section id="services" class="section">
+<div id="services" class="section">
         <h2 class="heading">Our Services</h2>
 
         <!-- Car Rental Section -->
@@ -37,7 +37,7 @@
             <p>Arrive in style with our luxury vehicle rental service. Choose from high-end cars like BMW, Mercedes, Audi, and more.</p>
             <p>Our luxury fleet includes sports cars, convertibles, and executive sedans, perfect for weddings, special occasions, and business trips.</p>
         </div>
-    </section>
+</div>
     <!------------------------------>
     <?php
         include "footer.php";
