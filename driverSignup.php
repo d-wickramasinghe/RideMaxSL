@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL-SignUp</title>
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
-    <link rel='stylesheet' type='text/css' href='styles/signup.css'>
+    <link rel='stylesheet' type='text/css' href='styles/d_signup.css'>
     <script src='myScript.js'></script>
+    <script src='js/d_bgScroll.js'></script> 
 </head>
-<body class="body">
+
+<body style="background-image: url('images/driver/signup.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;">
     <nav class="navbar">
         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
 
         <div class="div1">
             <h1 class="name">Welcome to Ride Max SL</h1>
             <ul class="nav-links">
-            <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="login.php">Vehicles</a></li>
                 <li><a href="login.php">Services</a></li>
                 <li><a href="about.php">About</a></li>
@@ -33,18 +40,13 @@
             <a href="registeras.php" class="loginbtn">Sign Up</a>
         </div>
     </nav>
-    <!--end of the header-->
-    
 
     <fieldset>
-        <legend>Create an New Account</legend>
+        <h2>Create a Driver Account</h2>
 
         <form method="post" action="driver_signup_insert.php">
-
-            
-
-        First Name : <br>
-        <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
+            First Name : <br>
+            <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
 
             Last Name : <br>
             <input type="text" class="input" name="lname" placeholder="Your Last name" required><br><br>
@@ -52,32 +54,31 @@
             Licence No : <br>
             <input type="text" class="input" name="licence" placeholder="Your License Number" required><br><br>
 
-        Email : <br>
-        <input type="email" class="input" name="email" placeholder="Your email" required><br><br>
+            Email : <br>
+            <input type="email" class="input" name="email" placeholder="Your email" required><br><br>
 
-        Address : <br>
-        <input type="text" class="input" name="address" placeholder="Your address" required><br><br>
+            Address : <br>
+            <input type="text" class="input" name="address" placeholder="Your address" required><br><br>
 
-        Phone Number : <br>
-        <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
+            Phone Number : <br>
+            <input type="text" class="input" name="contact" placeholder="Your phone number" required><br><br>
 
-        NIC : <br>
-        <input type="number" class="input" name="nic" placeholder="NIC number" required><br><br>
+            NIC : <br>
+            <input type="number" class="input" name="nic" placeholder="NIC number" required><br><br>
 
-        Username : <br>
-        <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
+            Username : <br>
+            <input type="text" class="input" name="uname" placeholder="Enter the username" required><br><br>
 
-        Password : <br>
-        <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
+            Password : <br>
+            <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
 
-        <input type="submit" class="btn" value="Sign Up" href="home.php">
-    </form>
-
+            <input type="submit" class="btn" value="Sign Up">
+        </form>
     </fieldset>
 
     <?php
-        include "footer.php";
+    include "footer.php";
     ?>
 </body>
-</html>
 
+</html>
