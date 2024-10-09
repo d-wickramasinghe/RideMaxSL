@@ -8,9 +8,14 @@
     <link rel='stylesheet' type='text/css' href='styles/main.css'>
     <link rel='stylesheet' type='text/css' href='styles/d_signup.css'>
     <script src='myScript.js'></script>
+    <script src='js/d_bgScroll.js'></script> 
 </head>
 
-<body class="body">
+<body style="background-image: url('images/driver/signup.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;">
     <nav class="navbar">
         <img src="images/logo/ride max sl (1).png" alt="logo" class="profile-photo">
 
@@ -36,14 +41,10 @@
         </div>
     </nav>
 
-
     <fieldset>
-        <h2>Create a Driver  Account</h2>
+        <h2>Create a Driver Account</h2>
 
         <form method="post" action="driver_signup_insert.php">
-
-
-
             First Name : <br>
             <input type="text" class="input" name="fname" placeholder="Your First name" required><br><br>
 
@@ -66,14 +67,13 @@
             <input type="number" class="input" name="nic" placeholder="NIC number" required><br><br>
 
             Username : <br>
-            <input type="text" class="input" name="uname" placeholder="enter the user name" required><br><br>
+            <input type="text" class="input" name="uname" placeholder="Enter the username" required><br><br>
 
             Password : <br>
             <input type="password" class="input" name="password" placeholder="Your password" required><br><br>
 
-            <input type="submit" class="btn" value="Sign Up" href="home.php">
+            <input type="submit" class="btn" value="Sign Up">
         </form>
-
     </fieldset>
 
     <?php
