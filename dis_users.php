@@ -9,18 +9,18 @@ require 'config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Max SL - User List</title>
 
-    <!-- Google Fonts -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* General Styles */
+   
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             color: #333;
-            background-image: url('images/background.jpg'); /* Replace with actual background image */
+            background-image: url('images/background.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -43,7 +43,6 @@ require 'config.php';
             margin-bottom: 30px;
         }
 
-        /* Table Styles */
         .admin-table {
             width: 100%;
             border-collapse: collapse;
@@ -53,7 +52,7 @@ require 'config.php';
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border: 2px solid #ffcc00; /* Frame around the table */
+            border: 2px solid #ffcc00; 
         }
 
         .admin-table thead {
@@ -66,7 +65,7 @@ require 'config.php';
         .admin-table th, .admin-table td {
             padding: 12px 15px;
             border: 1px solid #ddd;
-            text-align: center; /* Center-aligning table data */
+            text-align: center; 
         }
 
         .admin-table tbody tr:nth-child(even) {
@@ -78,7 +77,6 @@ require 'config.php';
             transition: all 0.3s ease-in-out;
         }
 
-        /* Responsive Styling */
         @media (max-width: 768px) {
             .admin-table, .admin-table thead, .admin-table tbody, .admin-table th, .admin-table td, .admin-table tr {
                 display: block;
@@ -111,7 +109,7 @@ require 'config.php';
 </head>
 <body style="background-image: url('newbg.jpg');">
 
-    <!-- Include header -->
+
     <?php include 'header.php'; ?>
 
     <div class="container">
@@ -159,7 +157,7 @@ require 'config.php';
         </table>
     </div>
 
-    <!-- Include footer -->
+    
     <?php include 'footer.php'; ?>
 
 </body>
